@@ -1,5 +1,6 @@
 <!doctype html>
-<html>
+<html lang="en">
+<title>Proyecto 1</title>
 
 <head>
     <meta charset="UTF-8">
@@ -10,39 +11,34 @@
 <body class="h-lvh flex flex-col md:flex-row m-auto bg-[#E4F0E8] ">
     <main class="bg-white mx-3 my-7 rounded-2xl p-7 md:w-8/12 justify-center md:m-auto">
         <h1 class="text-[#334444] text-2xl font-bold tracking-wide mb-5">Contact Us</h1>
-        <form>
+        <form id="miForm">
             <div class="flex flex-col md:flex-row md:gap-x-2">
                 <fieldset class="flex flex-col flex-1 mb-5">
-                    <label class="text-gray-500 mb-2" for="first-name">First Name <span class="text-[#81A094]">*</span>
+                    <label class="text-gray-500 mb-2" for="firstName">First Name <span class="text-[#81A094]">*</span>
                     </label>
-                    <input class="border border-[#A4ACAB] rounded-md h-10" type="text" id="first-name"
-                        name="first-name" />
+                    <input class="border border-[#A4ACAB] rounded-md h-10" type="text" id="firstName" name="firstName" required pattern="/[a-zA-Z]+/g" />
                 </fieldset>
                 <fieldset class="flex flex-col flex-1  mb-5">
-                    <label class="text-gray-500 mb-2" for="last-name">Last Name <span>*</span></label>
-                    <input class="border border-[#A4ACAB] rounded-md h-10" type="text" id="last-name"
-                        name="last-name" />
+                    <label class="text-gray-500 mb-2" for="lastName">Last Name <span>*</span></label>
+                    <input class="border border-[#A4ACAB] rounded-md h-10" type="text" id="lastName" name="lastName" />
                 </fieldset>
             </div>
 
             <fieldset class="flex flex-col mb-5">
-                <label class="text-gray-500 mb-2" for="email-address">Email Address<span>*</span> </label>
-                <input class="border border-[#A4ACAB] rounded-md h-10" type="email" id="email-address"
-                    name="email-address" />
+                <label class="text-gray-500 mb-2" for="emailAddress">Email Address<span>*</span> </label>
+                <input class="border border-[#A4ACAB] rounded-md h-10" type="email" id="emailAddress" name="emailAddress" />
             </fieldset>
             <fieldset class="flex flex-col mb-3 mb-5">
                 <legend class="text-gray-500 mb-2">Query type <span>*</span></legend>
                 <div class="flex flex-col md:flex-row md:gap-x-2">
                     <div class="border border-[#A4ACAB] rounded-md h-10 py-3 pl-3 mb-3 h-fit flex-1">
-                        <input class="mr-2" type="radio" id="general-enquiry" name="query-type"
-                            value="General Enquiry" />
-                        <label class="text-gray-500 font-medium" for="general-enquiry">General Enquiry
+                        <input class="mr-2" type="radio" id="generalEnquiry" name="querytype" value="General Enquiry" required />
+                        <label class="text-gray-500 font-medium" for="generalEnquiry">General Enquiry
                         </label>
                     </div>
                     <div class="border border-[#A4ACAB] rounded-md h-10 py-3 pl-3 mb-3 h-fit flex-1">
-                        <input class="mr-2" type="radio" id="support-request" name="query-type"
-                            value="Support Request" />
-                        <label class="text-gray-500 font-medium" for="support-request">Support Request
+                        <input class="mr-2" type="radio" id="supportRequest" name="querytype" value="Support Request" required />
+                        <label class="text-gray-500 font-medium" for="supportRequest">Support Request
                         </label>
                     </div>
                 </div>
@@ -50,22 +46,21 @@
             </fieldset>
             <fieldset class="flex flex-col mb-8">
                 <label class="text-gray-500 mb-2" for="message">Message<span>*</span></label>
-                <textarea class="box-border border border-[#A4ACAB] rounded-md pt-3 " id="message" name="message"
-                    rows="10" cols="13" placeholder="lorem"></textarea>
+                <textarea class="box-border border border-[#A4ACAB] rounded-md pt-3 " id="message" name="message" rows="10" cols="13" placeholder="lorem" required></textarea>
             </fieldset>
             <fieldset class="mb-5">
-                <input type="checkbox" id="terms-and-conditions" name="terms-and-conditions" />
-                <label class="text-gray-500 mb-2 font-medium" for="terms-and-conditions">I consent to being contacted by
+                <input type="checkbox" id="termsAndConditions" name="termsAndConditions" />
+                <label class="text-gray-500 mb-2 font-medium" for="termsAndConditions">I consent to being contacted by
                     the
                     team <span class="text-[#81A094]">*</span></label>
             </fieldset>
 
-            <button type="submit"
-                class="flex bg-[#387B6A] text-gray-200 w-full m-auto justify-center h-12 items-center rounded-lg mb-5">
+            <button type="submit" class="flex bg-[#387B6A] text-gray-200 w-full m-auto justify-center h-12 items-center rounded-lg mb-5">
                 Submit
             </button>
         </form>
     </main>
+    <script type="module" defer src="script.js"></script>
 </body>
 
 </html>
